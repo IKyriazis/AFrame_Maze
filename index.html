@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>demo: aframe-maze-component</title>
+    <meta name="description" content="demo: aframe-maze-component">        
+    <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.6.0/dist/aframe-look-at-component.min.js"></script> 
+    <script src="https://unpkg.com/aframe-maze-component@0.1.24/dist/aframe-maze-component.min.js"></script>
+
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <img id="texture-wall" src="img/arrow-left.png">
+        <img id="texture-floor" src="img/floor-texture-1.jpg">
+        <a-box id="wall-one" 
+          static-body material="src: #texture-wall" 
+          depth="1" width="4" height="1"></a-box>
+        <a-cylinder id="end-cap"
+          static-body color="#444444" 
+          depth="1.1" width="1.1" height="2"
+          radius="0.5"></a-cylinder>
+      </a-assets>
+      <a-sky id="sky" color="#0000ff"></a-sky>
+      <a-box static-body
+          id="center" 
+          position="0 0 0"
+          color="red" 
+          depth="0.5" width="0.5" height="10"></a-box>
+      <a-entity id="player"
+          camera
+          universal-controls
+          kinematic-body
+          rotation="0 -90 0"
+          position="-8.61 1.6 -12.494">
+      </a-entity>
+      <!-- birds-eye view box to stand on -->
+      <!-- lower platform -->
+      <a-box static-body 
+          depth="0.25" height="1" width="1" 
+          position="5 9.8 3"
+          rotation="-90 0 0"
+          color="tomato"></a-box>
+           
+      <a-box static-body 
+          depth="3" height="15" width=".25" 
+          position="-4.5 0 -3"
+          rotation="-90 0 0"
+          color="tomato"></a-box>
+      <a-box static-body 
+          depth="3" height=".25" width="18" 
+          position="4.5 0 4.5"
+          rotation="-90 0 0"
+          color="tomato"></a-box>
+      <a-box static-body 
+          depth="3" height="9" width=".25" 
+          position="4.5 0 0"
+          rotation="-90 0 0"
+          color="tomato"></a-box>
+      <a-box static-body 
+          depth="3" height=".25" width="3" 
+          position="-3 0 -4.5"
+          rotation="-90 0 0"
+          color="tomato"></a-box>
+      <a-box static-body 
+          depth="3" height=".25" width="3" 
+          position="3 0 -4.5"
+          rotation="-90 0 0"
+          color="tomato"></a-box>
+       <a-box static-body 
+          depth="3" height="9" width=".25" 
+          position="-1.5 0 -9"
+          rotation="-90 0 0"
+          color="tomato"></a-box>
+      <a-box static-body 
+          depth="3" height="3" width=".25" 
+          position="1.5 0 -6"
+          rotation="-90 0 0"
+          color="tomato"></a-box>
+      <a-box static-body 
+          depth="3" height="3" width=".25" 
+          position="4.5 0 -9"
+          rotation="-90 0 0"
+          color="tomato"></a-box>
+      <a-box static-body 
+          depth="3" height=".25" width="3" 
+          position="3 0 -10.5"
+          rotation="-90 0 0"
+          color="tomato"></a-box>
+      <a-box static-body 
+          depth="3" height=".25" width="3" 
+          position="6 0 -7.5"
+          rotation="-90 0 0"
+          color="tomato"></a-box>
+      <a-box static-body 
+          depth="3" height="9" width=".25" 
+          position="7.5 0 -3"
+          rotation="-90 0 0"
+          color="tomato"></a-box>
+      <a-box static-body 
+          depth="3" height=".25" width="3" 
+          position="9 0 1.5"
+          rotation="-90 0 0"
+          color="tomato"></a-box>
+      <a-box static-body 
+          depth="3" height="15" width=".25" 
+          position="13.5 0 -3"
+          rotation="-90 0 0"
+          color="tomato"></a-box>
+      <a-box static-body 
+          depth="3" height=".25" width="3" 
+          position="12 0 -1.5"
+          rotation="-90 0 0"
+          color="tomato"></a-box>
+      <a-box static-body 
+          depth="3" height="6" width=".25" 
+          position="10.5 0 -4.5"
+          rotation="-90 0 0"
+          color="tomato"></a-box>
+       <a-box static-body 
+          depth="3" height=".25" width="6" 
+          position="10.5 0 -10.5"
+          rotation="-90 0 0"
+          color="tomato"></a-box>
+      <a-box static-body 
+          depth="3" height="9" width=".25" 
+          position="7.5 0 -15"
+          rotation="-90 0 0"
+          color="tomato"></a-box>
+      <a-box static-body 
+          depth="3" height=".25" width="6" 
+          position="4.5 0 -19.5"
+          rotation="-90 0 0"
+          color="tomato"></a-box>
+      <a-box static-body 
+          depth="3" height=".25" width="6" 
+          position="1.5 0 -13.5"
+          rotation="-90 0 0"
+          color="tomato"></a-box>
+      <a-box static-body 
+          depth="3" height="3" width=".25" 
+          position="4.5 0 -15"
+          rotation="-90 0 0"
+          color="tomato"></a-box>
+       <a-box static-body 
+          depth="3" height="3" width=".25" 
+          position="1.5 0 -18"
+          rotation="-90 0 0"
+          color="tomato"></a-box>
+      <a-box static-body 
+          depth="3" height=".25" width="6" 
+          position="-1.5 0 -16.5"
+          rotation="-90 0 0"
+          color="tomato"></a-box>
+      <a-box static-body 
+          depth="3" height="3" width=".25" 
+          position="-4.5 0 -15"
+          rotation="-90 0 0"
+          color="tomato"></a-box>
+        <a-box static-body 
+          depth="500" height="10" width=".1" 
+          position="-9 0 50"
+          rotation="0 0 0"
+          color="tomato"></a-box>
+
+
+      <a-entity id="maze1" 
+          maze='size: 20 21; wall: #wall-one; cap: #end-cap; open: S 0 N 1 2 4 E 5;' 
+          position='-60 0.5 -8'
+          rotation='0 0 0'></a-entity>
+      
+      <a-grid id="ground" width="200" height="200" static-body color="white"></a-grid>
+    </a-scene>
+    <script>
+
+      var playerEl = document.querySelector('#player');
+      if (playerEl) {
+        playerEl.addEventListener('componentchanged', function (evt) {
+        if (evt.detail.name !== 'position') { return; }
+          console.log(evt.target.getAttribute('position'));
+        });
+        playerEl.addEventListener('collide', function (e) {
+          if (e.detail.body.id == 3) {
+            alert("Congrats, you don't suck! Now here's a more challenging maze.");
+            document.querySelector("#player").setAttribute('position', '-16 1.6 -28');
+            document.querySelector("#player").setAttribute('rotation', '0 0 0');
+          }
+      
+      })
+      };
+  </script>
+  </body>
+</html>
