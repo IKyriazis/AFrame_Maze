@@ -24,11 +24,19 @@
           radius="0.5"></a-cylinder>
       </a-assets>
       <a-sky id="sky" color="#0000ff"></a-sky>
+      <!--maze 1 success pole-->
       <a-box static-body
           id="center" 
           position="0 0 0"
           color="red" 
           depth="0.5" width="0.5" height="10"></a-box>
+      <!-- maze 2 success pole-->
+      <a-box static-body
+          id="center" 
+          position="-60 0.5 -8"
+          color="red" 
+          depth="0.5" width="0.5" height="10"></a-box>
+
       <a-entity id="player"
           camera
           universal-controls
@@ -163,7 +171,7 @@
           depth="500" height="10" width=".1" 
           position="-9 0 50"
           rotation="0 0 0"
-          color="tomato"></a-box>
+          color="#0000ff"></a-box>
 
 
       <a-entity id="maze1" 
